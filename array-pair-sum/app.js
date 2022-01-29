@@ -1,4 +1,4 @@
-const findPairs = (sum, numbers) => {
+exports.findPairs = (sum, numbers) => {
   const map = {}
   const results = []
   numbers.forEach((num, i) => {
@@ -10,6 +10,3 @@ const findPairs = (sum, numbers) => {
   })
   return results
 }
-
-console.log(findPairs(10, [3, 4, 5, 5, 6, 7]))
-console.log(findPairs(8, [3, 4, 5, 4, 4, 3, 2]))

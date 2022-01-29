@@ -12,7 +12,7 @@ const findAnagrams = word => {
   return anagrams.map(el => el.join(''))
 }
 
-const finda = (text, word) => {
+exports.findAnagram = (text, word) => {
   const anagrams = findAnagrams(word.split(''))
   const result = []
 
@@ -23,5 +23,3 @@ const finda = (text, word) => {
   return {result: result || 'null', pieces: result.length}
 }
 
-// console.log(finda('AdnBndAndBdaBn', 'dAnB'))
-console.log(finda('AbrAcadAbRa', 'cAda'))

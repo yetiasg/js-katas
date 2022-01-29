@@ -1,4 +1,4 @@
-const findAnagrams = word => {
+const findAnagrams = (word) => {
   const signs = [...word]
   const anagrams = []
   if(signs.length === 1) return signs
@@ -12,6 +12,4 @@ const findAnagrams = word => {
   return anagrams.map(el => el.join(''))
 }
 
-console.log(findAnagrams('ABC'))
-
-// findAnagrams(word.split(''))
+module.exports = {findAnagrams}

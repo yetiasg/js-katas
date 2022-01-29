@@ -1,19 +1,14 @@
 const search = (number, array) => {
-  return (function searchNumber(left, right){
-    const center = left + Math.floor((right-left) / 2)
+  let start = 0
+  let end = array.length-1
 
-    if(array[center] === number) return {center}
-    if(left === center) return null
-    if(array[center] > number) return searchNumber(left, center)
-    if(array[center] < number) return searchNumber(center, right)
-    return null
-  })(0, array.length)
+  while(start <= end){
+    let center = Math.floor((start + end)/2)
+    if(array[center] === number) return center
+    else if(array[center] < number) start = center + 1
+    else end = center - 1
+  }
+  return false
 }
 
-const arr = [
-    1,   2,   3,   4,   5,   6,  23, 36,
-    43,  45,  56,  63,  64,  67,  73, 77,
-    245, 456, 523, 563, 624, 674, 678, 952
-  ]
-
-console.log(search(245, arr))
+module.exports = {search}

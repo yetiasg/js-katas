@@ -1,4 +1,4 @@
-const countClosedLoops = number => {
+exports.countClosedLoops = number => {
   let loops = 0
   let numbers = number.toString().split('')
   numbers.forEach(num => {
@@ -7,5 +7,3 @@ const countClosedLoops = number => {
   })
   return loops
 }
-
-console.log(countClosedLoops(6886))

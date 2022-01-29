@@ -1,0 +1,24 @@
+{
+  "name": "js-katas",
+  "type": "commonjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest ./*/*.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yetiasg/js-katas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yetiasg/js-katas/issues"
+  },
+  "homepage": "https://github.com/yetiasg/js-katas#readme",
+  "dependencies": {
+    "jest": "^27.4.7"
+  }
+}
