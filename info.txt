@@ -10,5 +10,3 @@ fibonacci ~
 closed-loops ~
 can-scramble ~
 array-pair-sum ~
-
-anagram-detection

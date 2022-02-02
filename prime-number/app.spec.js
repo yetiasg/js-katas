@@ -7,8 +7,8 @@ const primeNumbers = [
  41, 43, 47
 ]
 
-describe('Checking if given number is a prime number', () => {
-  it('find sout if number is prime', () => {
+describe('#prime-number', () => {
+  describe('Valid arguments input', () => {
     const primeNumber = 13
     const notPrimeNumber = 20 
 
@@ -17,14 +17,21 @@ describe('Checking if given number is a prime number', () => {
       isNumberPrime(i) ? primes.push(i) : false
     }
 
-    expect(primes).toEqual(primeNumbers);
-    expect(primes).not.toEqual([]);
-    expect(isNumberPrime(primeNumber)).toBe(true)
-    expect(isNumberPrime(notPrimeNumber)).not.toBe(true)
-    expect(isNumberPrime('notPrimeNumber')).toEqual('You need to pass a number')
-    expect(isNumberPrime(true)).toEqual('You need to pass a number')
-    expect(isNumberPrime()).toEqual('You need to pass a number')
-    expect(isNumberPrime([])).toEqual('You need to pass a number')
-    expect(isNumberPrime('23')).toEqual('You need to pass a number')
+    it('finds prime numbers on correct arguments', () => {
+      expect(primes).toEqual(primeNumbers);
+      expect(primes).not.toEqual([]);
+      expect(isNumberPrime(primeNumber)).toBe(true)
+      expect(isNumberPrime(notPrimeNumber)).not.toBe(true)
+    })
+  })
+
+  describe('Invalid arguments input', () => {
+    it('throws - You need to pass a number -  exception when input type is invalid', () => {
+      expect(() => isNumberPrime('sasda')).toThrow('You need to pass a number')
+      expect(() => isNumberPrime(true)).toThrow('You need to pass a number')
+      expect(() => isNumberPrime()).toThrow('You need to pass a number')
+      expect(() => isNumberPrime([])).toThrow('You need to pass a number')
+      expect(() => isNumberPrime('23')).toThrow('You need to pass a number')
+    })
   })
 })

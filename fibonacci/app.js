@@ -1,6 +1,6 @@
 exports.findFibonacci = position => {
-  if(typeof position !== 'number') return 'You need to pass a number'
-  if(position <0 ) return 'Bad position'
+  if(typeof position !== 'number') throw new Error('You need to pass a number')
+  if(position <0 ) throw new Error('Bad position')
 
   const result = [0, 1]
 

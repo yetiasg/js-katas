@@ -1,6 +1,6 @@
 exports.findPairs = (sum, numbers = []) => {
-  if(numbers.length <=0 || !Array.isArray(numbers) || numbers.some(el => typeof el !== 'number')) return 'You need to pass an array with numbers'
-  if(!sum || typeof sum !== 'number') return 'You need to pass number to find'
+  if(numbers.length <=0 || !Array.isArray(numbers) || numbers.some(el => typeof el !== 'number')) throw new Error('You need to pass an array with numbers')
+  if(!sum || typeof sum !== 'number') throw new Error('You need to pass number to find')
 
   const map = {}
   const results = []

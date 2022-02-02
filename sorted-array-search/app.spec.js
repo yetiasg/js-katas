@@ -7,18 +7,28 @@ const numbers = [
   245, 456, 523, 563, 624, 674, 678, 952
 ]
 
-describe('Finding index of given number in array', () => {
-  it('finds index in array of given number', () => {
-    expect(search(245, numbers)).toEqual(16)
-    expect(search(1500, numbers)).toBe(false)
-    expect(search(245)).toBe(false)
-    expect(search(245, [])).toBe(false)
-    expect(search(245, 'numbers')).toEqual('You need to pass an array with numbers')
-    expect(search(245, true)).toEqual('You need to pass an array with numbers')
-    expect(search(245, 5)).toEqual('You need to pass an array with numbers')
-    expect(search('245', numbers)).toEqual('You need to pass number to find')
-    expect(search('', numbers)).toEqual('You need to pass number to find')
-    expect(search([], numbers)).toEqual('You need to pass number to find')
-    expect(search(true, numbers)).toEqual('You need to pass number to find')
+describe('#sorted-array-search', () => {
+  describe('Valid arguments input', () => {
+    it('finds index in array of given number', () => {
+      expect(search(245, numbers)).toEqual(16)
+      expect(search(1500, numbers)).toBe(false)
+      expect(search(245)).toBe(false)
+      expect(search(245, [])).toBe(false)
+    })
+  })
+
+  describe('Invalid arguments input', () => {
+    it('throws - You need to pass an array with numbers - exception when input type is invalid', () => {
+      expect(() => search(245, 'numbers')).toThrow('You need to pass an array with numbers')
+      expect(() => search(245, true)).toThrow('You need to pass an array with numbers')
+      expect(() => search(245, 5)).toThrow('You need to pass an array with numbers')
+    })
+
+    it('throws - You need to pass number to find - exception when input type is invalid', () => {
+      expect(() => search('245', numbers)).toThrow('You need to pass number to find')
+      expect(() => search('', numbers)).toThrow('You need to pass number to find')
+      expect(() => search([], numbers)).toThrow('You need to pass number to find')
+      expect(() => search(true, numbers)).toThrow('You need to pass number to find')
+    })
   })
 })

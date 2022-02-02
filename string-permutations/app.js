@@ -16,5 +16,5 @@ exports.findAnagrams = (word) => {
   if(word && word.length >=1 && typeof word === 'string'){
     return search(word)
   }
-  return 'You need to pass a string'
+  throw new Error('You need to pass a string')
 }

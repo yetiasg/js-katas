@@ -1,5 +1,5 @@
 exports.countClosedLoops = number => {
-  if(typeof number !== 'number') return 'You need to pass a number'
+  if(typeof number !== 'number') throw new Error('You need to pass a number')
   if(number <0 ) number = Math.abs(number)
 
   let loops = 0

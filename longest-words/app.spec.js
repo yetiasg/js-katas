@@ -1,9 +1,8 @@
 const { expect, describe, it } = require('@jest/globals')
 const { findLongestWords } = require('./app.js')
 
-describe('Find all different  longest words', () => {
-  it('finds all different longest words', () => {
-
+describe('#longest-words', () => {
+  describe('Valid arguments input', () => {
     const options = [
       {
         sentence: "You are just an old antidisestablishmentarian",
@@ -19,14 +18,20 @@ describe('Find all different  longest words', () => {
       }
     ]
 
-    options.forEach((_, i) => {
-      expect(findLongestWords(options[i].sentence)).toEqual((options[i].result));
-      expect(findLongestWords(options[i].sentence)).not.toEqual(([]));
+    it('finds all different longest words', () => {
+      options.forEach((_, i) => {
+        expect(findLongestWords(options[i].sentence)).toEqual((options[i].result));
+        expect(findLongestWords(options[i].sentence)).not.toEqual(([]));
+      })
     })
+  })
 
-    expect(findLongestWords()).toEqual('You need to pass a string sentence');
-    expect(findLongestWords([])).toEqual('You need to pass a string sentence');
-    expect(findLongestWords(323)).toEqual('You need to pass a string sentence');
-    expect(findLongestWords(true)).toEqual('You need to pass a string sentence');
+  describe('Invalid arguments input', () => {
+    it('throws - You need to pass a string sentence - exception when input type is invalid', () => {
+      expect(() => findLongestWords()).toThrow('You need to pass a string sentence');
+      expect(() => findLongestWords([])).toThrow('You need to pass a string sentence');
+      expect(() => findLongestWords(323)).toThrow('You need to pass a string sentence');
+      expect(() => findLongestWords(true)).toThrow('You need to pass a string sentence');
+    })
   })
 })

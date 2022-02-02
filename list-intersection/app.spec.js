@@ -1,21 +1,27 @@
 const { expect, describe, it } = require('@jest/globals')
 const { listIntersection } = require('./app.js')
 
-describe('Find all arrays intersections', () => {
-  it('finds all arrays intersections', () => {
-    const result = [ 'dog', 'cat' ] || [ 'cat' , 'dog']
+describe('#list-intersection', () => {
+  describe('Valid arguments input', () => {
+    const result = [ 'dog', 'cat' ].sort()
 
-    expect(listIntersection(['dog', 'cat', 'egg'], ['cat', 'dog', 'chicken'])).toEqual(result)
-    expect(listIntersection(['dog', 'cat', 'egg'], ['cat', 'dog', 'chicken'])).toEqual(result)
-    expect(listIntersection([], ['cat', 'dog', 'chicken'])).toEqual('You need to pass an array')
-    expect(listIntersection('cat', ['cat', 'dog', 'chicken'])).toEqual('You need to pass an array')
-    expect(listIntersection(45, ['cat', 'dog', 'chicken'])).toEqual('You need to pass an array')
-    expect(listIntersection(true, ['cat', 'dog', 'chicken'])).toEqual('You need to pass an array')
+    it('finds all arrays intersections', () => {
+      expect(listIntersection(['dog', 'cat', 'egg'], ['cat', 'dog', 'chicken'])).toEqual(result)
+      expect(listIntersection([ 'cat', 'dog', 'egg'], ['cat', 'dog', 'chicken'])).toEqual(result)
+    })
+  })
 
-    expect(listIntersection(['dog', 'cat', 'egg'], [])).toEqual('You need to pass an array')
-    expect(listIntersection(['dog', 'cat', 'egg'], 'cat')).toEqual('You need to pass an array')
-    expect(listIntersection(['dog', 'cat', 'egg'], 45)).toEqual('You need to pass an array')
-    expect(listIntersection(['dog', 'cat', 'egg'], true)).toEqual('You need to pass an array')
-
+  describe('Invalid arguments input', () => {
+    it('throws -You need to pass an array - exception when input type is invalid', () => {
+      expect(() => listIntersection([], ['cat', 'dog', 'chicken'])).toThrow('You need to pass an array')
+      expect(() => listIntersection('cat', ['cat', 'dog', 'chicken'])).toThrow('You need to pass an array')
+      expect(() => listIntersection(45, ['cat', 'dog', 'chicken'])).toThrow('You need to pass an array')
+      expect(() => listIntersection(true, ['cat', 'dog', 'chicken'])).toThrow('You need to pass an array')
+  
+      expect(() => listIntersection(['dog', 'cat', 'egg'], [])).toThrow('You need to pass an array')
+      expect(() => listIntersection(['dog', 'cat', 'egg'], 'cat')).toThrow('You need to pass an array')
+      expect(() => listIntersection(['dog', 'cat', 'egg'], 45)).toThrow('You need to pass an array')
+      expect(() => listIntersection(['dog', 'cat', 'egg'], true)).toThrow('You need to pass an array')
+    })
   })
 })
