@@ -12,7 +12,7 @@ describe('#list-intersection', () => {
   })
 
   describe('Invalid arguments input', () => {
-    it('throws -You need to pass an array - exception when input type is invalid', () => {
+    it('throws -You need to pass an array - exception when input is invalid', () => {
       expect(() => listIntersection([], ['cat', 'dog', 'chicken'])).toThrow('You need to pass an array')
       expect(() => listIntersection('cat', ['cat', 'dog', 'chicken'])).toThrow('You need to pass an array')
       expect(() => listIntersection(45, ['cat', 'dog', 'chicken'])).toThrow('You need to pass an array')

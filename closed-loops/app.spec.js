@@ -18,7 +18,7 @@ describe('#closed-loops', () => {
   })
 
   describe('Invalid arguments input', () => {
-    it('throws - You need to pass a number - exception when input type is invalid', () => {
+    it('throws - You need to pass a number - exception when input is invalid', () => {
       expect(() => countClosedLoops()).toThrow('You need to pass a number')
       expect(() => countClosedLoops([])).toThrow('You need to pass a number')
       expect(() => countClosedLoops('8')).toThrow('You need to pass a number')

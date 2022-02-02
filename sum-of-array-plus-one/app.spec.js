@@ -12,12 +12,12 @@ describe('#sum-of-array-plus-one', () => {
   })
 
   describe('Invalid arguments input', () => {
-    it('throws - You can sum numbers only - exception when input type is invalid', () => {
+    it('throws - You can sum numbers only - exception when input is an invalid array', () => {
       expect(() => sumPlusOne([1, 2, '3'])).toThrow('You can sum numbers only')
       expect(() => sumPlusOne([true])).toThrow('You can sum numbers only')
     })
 
-    it('throws - You need to pass numbers in array - exception when input type is invalid', () => {
+    it('throws - You need to pass numbers in array - exception when input is not an array', () => {
       expect(() => sumPlusOne(5)).toThrow('You need to pass numbers in array')
       expect(() => sumPlusOne('h')).toThrow('You need to pass numbers in array')
       expect(() => sumPlusOne(true)).toThrow('You need to pass numbers in array')

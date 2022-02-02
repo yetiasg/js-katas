@@ -18,13 +18,13 @@ describe('#sorted-array-search', () => {
   })
 
   describe('Invalid arguments input', () => {
-    it('throws - You need to pass an array with numbers - exception when input type is invalid', () => {
+    it('throws - You need to pass an array with numbers - exception when input is not valid array', () => {
       expect(() => search(245, 'numbers')).toThrow('You need to pass an array with numbers')
       expect(() => search(245, true)).toThrow('You need to pass an array with numbers')
       expect(() => search(245, 5)).toThrow('You need to pass an array with numbers')
     })
 
-    it('throws - You need to pass number to find - exception when input type is invalid', () => {
+    it('throws - You need to pass number to find - exception when input is invalid', () => {
       expect(() => search('245', numbers)).toThrow('You need to pass number to find')
       expect(() => search('', numbers)).toThrow('You need to pass number to find')
       expect(() => search([], numbers)).toThrow('You need to pass number to find')

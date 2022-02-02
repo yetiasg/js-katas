@@ -26,7 +26,7 @@ describe('#prime-number', () => {
   })
 
   describe('Invalid arguments input', () => {
-    it('throws - You need to pass a number -  exception when input type is invalid', () => {
+    it('throws - You need to pass a number -  exception when input is invalid', () => {
       expect(() => isNumberPrime('sasda')).toThrow('You need to pass a number')
       expect(() => isNumberPrime(true)).toThrow('You need to pass a number')
       expect(() => isNumberPrime()).toThrow('You need to pass a number')

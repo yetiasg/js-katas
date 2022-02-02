@@ -27,7 +27,7 @@ describe('#longest-words', () => {
   })
 
   describe('Invalid arguments input', () => {
-    it('throws - You need to pass a string sentence - exception when input type is invalid', () => {
+    it('throws - You need to pass a string sentence - exception when input is invalid', () => {
       expect(() => findLongestWords()).toThrow('You need to pass a string sentence');
       expect(() => findLongestWords([])).toThrow('You need to pass a string sentence');
       expect(() => findLongestWords(323)).toThrow('You need to pass a string sentence');

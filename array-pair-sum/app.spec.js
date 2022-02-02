@@ -18,7 +18,7 @@ describe('#array-pair-sum', () => {
   })
 
   describe('Invalid arguments input', () => {
-    it('throws - You need to pass an array with numbers - exception when input type is invalid', () => {
+    it('throws - You need to pass an array with numbers - exception when input array is not nvalid', () => {
       expect(() => findPairs(14, [])).toThrow('You need to pass an array with numbers')
       expect(() => findPairs(14, [3, 4, '5', 5, 6, 7])).toThrow('You need to pass an array with numbers')
       expect(() => findPairs(14, true)).toThrow('You need to pass an array with numbers')
@@ -26,7 +26,7 @@ describe('#array-pair-sum', () => {
       expect(() => findPairs(14)).toThrow('You need to pass an array with numbers')
     })
 
-    it('throws - You need to pass number to find - exception when input type is invalid', () => {
+    it('throws - You need to pass number to find - exception when input is invalid', () => {
       expect(() => findPairs('', [3, 4, 5, 5, 6, 7])).toThrow('You need to pass number to find')
       expect(() => findPairs('5', [3, 4, 5, 5, 6, 7])).toThrow('You need to pass number to find')
       expect(() => findPairs([], [3, 4, 5, 5, 6, 7])).toThrow('You need to pass number to find')

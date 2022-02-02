@@ -11,13 +11,13 @@ describe('#multiples-of-3-and-5', () => {
   })
 
   describe('Invalid arguments input', () => {
-    it('throws - You need to pass an array with numbers - exception when input type is invalid', () => {
+    it('throws - You need to pass an array with numbers - exception when input array is not valid', () => {
       expect(() => sumOfMultiples([], 10)).toThrow('You need to pass an array with numbers');
       expect(() => sumOfMultiples([true], 10)).toThrow('You need to pass an array with numbers');
       expect(() => sumOfMultiples('5', 10)).toThrow('You need to pass an array with numbers');
     })
 
-    it('throws - You need to pass number -  exception when input type is invalid', () => {
+    it('throws - You need to pass number -  exception when input is invalid', () => {
       expect(() => sumOfMultiples([3], '10')).toThrow('You need to pass number');
       expect(() => sumOfMultiples([3])).toThrow('You need to pass number');
       expect(() => sumOfMultiples([3], [])).toThrow('You need to pass number');
