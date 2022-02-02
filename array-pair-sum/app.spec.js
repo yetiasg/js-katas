@@ -12,5 +12,17 @@ describe('Pairs of numbers which sum is equal to given number', () => {
       expect(findPairs(el.val, el.arr)).toEqual(el.result)
     })
 
+    expect(findPairs(14, [3, 4, 5, 5, 6, 7])).toEqual(false)
+
+    expect(findPairs(14, [])).toEqual('You need to pass an array with numbers')
+    expect(findPairs(14, [3, 4, '5', 5, 6, 7])).toEqual('You need to pass an array with numbers')
+    expect(findPairs(14, true)).toEqual('You need to pass an array with numbers')
+    expect(findPairs(14, '5')).toEqual('You need to pass an array with numbers')
+    expect(findPairs(14)).toEqual('You need to pass an array with numbers')
+
+    expect(findPairs('', [3, 4, 5, 5, 6, 7])).toEqual('You need to pass number to find')
+    expect(findPairs('5', [3, 4, 5, 5, 6, 7])).toEqual('You need to pass number to find')
+    expect(findPairs([], [3, 4, 5, 5, 6, 7])).toEqual('You need to pass number to find')
+    expect(findPairs(true, [3, 4, 5, 5, 6, 7])).toEqual('You need to pass number to find')
   })
 })

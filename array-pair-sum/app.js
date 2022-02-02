@@ -1,4 +1,7 @@
-exports.findPairs = (sum, numbers) => {
+exports.findPairs = (sum, numbers = []) => {
+  if(numbers.length <=0 || !Array.isArray(numbers) || numbers.some(el => typeof el !== 'number')) return 'You need to pass an array with numbers'
+  if(!sum || typeof sum !== 'number') return 'You need to pass number to find'
+
   const map = {}
   const results = []
   numbers.forEach((num, i) => {
@@ -8,5 +11,5 @@ exports.findPairs = (sum, numbers) => {
     }
     else map[sum - num] = num
   })
-  return results
+  return results.length > 0 ? results : false
 }

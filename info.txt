@@ -9,6 +9,6 @@ kth-largest-element-in-array ~
 fibonacci ~
 closed-loops ~
 can-scramble ~
+array-pair-sum ~
 
-array-pair-sum
 anagram-detection
