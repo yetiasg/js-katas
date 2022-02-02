@@ -3,10 +3,10 @@ sorted-array-search ~
 string-permutations ~
 sum-of-array-plus-one ~
 multiples-of-3-and-5 ~
+longest-words ~
+list-intersection ~
+kth-largest-element-in-array ~
 
-longest-words
-list-intersection
-kth-largest-element-in-array
 fibonacci
 can-scramble
 array-pair-sum
