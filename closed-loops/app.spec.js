@@ -12,5 +12,11 @@ describe('Loops in number', () => {
     options.forEach(el => {
       expect(countClosedLoops(el.num)).toEqual(el.loops)
     })
+
+    expect(countClosedLoops(0)).toEqual(0)
+    expect(countClosedLoops()).toEqual('You need to pass a number')
+    expect(countClosedLoops([])).toEqual('You need to pass a number')
+    expect(countClosedLoops('8')).toEqual('You need to pass a number')
+    expect(countClosedLoops(true)).toEqual('You need to pass a number')
   })
 })

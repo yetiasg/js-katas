@@ -6,9 +6,9 @@ multiples-of-3-and-5 ~
 longest-words ~
 list-intersection ~
 kth-largest-element-in-array ~
+fibonacci ~
+closed-loops ~
+can-scramble ~
 
-fibonacci
-can-scramble
 array-pair-sum
-closed-loops
 anagram-detection

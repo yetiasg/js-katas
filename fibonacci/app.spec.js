@@ -8,5 +8,13 @@ describe('Find fibonacci value for given index', () => {
     fibos.forEach((el, i) => {
       expect(findFibonacci(i)).toEqual(el)
     })
+
+    expect(findFibonacci(6)).toEqual(8)
+    expect(findFibonacci('6')).toEqual('You need to pass a number')
+    expect(findFibonacci()).toEqual('You need to pass a number')
+    expect(findFibonacci([])).toEqual('You need to pass a number')
+    expect(findFibonacci(true)).toEqual('You need to pass a number')
+
+    expect(findFibonacci(-1)).toEqual('Bad position')
   })
 })
