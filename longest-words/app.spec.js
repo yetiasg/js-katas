@@ -1,7 +1,7 @@
 const { expect, describe, it } = require('@jest/globals')
 const { findLongestWords } = require('./app.js')
 
-describe('#longest-words', () => {
+describe('#findLongestWords', () => {
   describe('Valid arguments input', () => {
     const options = [
       {

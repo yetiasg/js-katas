@@ -7,13 +7,21 @@ const numbers = [
   245, 456, 523, 563, 624, 674, 678, 952
 ]
 
-describe('#sorted-array-search', () => {
+describe('#search', () => {
   describe('Valid arguments input', () => {
     it('finds index in array of given number', () => {
       expect(search(245, numbers)).toEqual(16)
-      expect(search(1500, numbers)).toBe(false)
-      expect(search(245)).toBe(false)
-      expect(search(245, [])).toBe(false)
+    })
+
+    describe('can not find index if it is not possible', () => {
+      it('index is greater then array lenght', () => {
+        expect(search(1500, numbers)).toBe(false)
+      })
+
+      it('array is not provided or empty', () => {
+        expect(search(245)).toBe(false)
+        expect(search(245, [])).toBe(false)
+      })
     })
   })
 

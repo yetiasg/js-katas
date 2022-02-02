@@ -1,7 +1,7 @@
 const { expect, describe, it } = require('@jest/globals')
 const { canScramble } = require('./app.js')
 
-describe('#can-scramble', () => {
+describe('#canScramble', () => {
   describe('Valid arguments input', () => {
     it('checks if given word can be reshape to second given word', () => {
       expect(canScramble('123', '312')).toEqual(true)

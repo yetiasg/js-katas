@@ -12,7 +12,7 @@ const search = (word) => {
   return anagrams.map(el => el.join(''))
 }
 
-exports.findAnagrams = (word) => {
+exports.generatePermutatios = (word) => {
   if(word && word.length >=1 && typeof word === 'string'){
     return search(word)
   }

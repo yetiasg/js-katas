@@ -7,21 +7,24 @@ const primeNumbers = [
  41, 43, 47
 ]
 
-describe('#prime-number', () => {
+describe('#isNumberPrime', () => {
   describe('Valid arguments input', () => {
-    const primeNumber = 13
-    const notPrimeNumber = 20 
+    it('finds prime numbers', () => {
+      expect(isNumberPrime(13)).toBe(true)
+    })
+    it('detects nonpirme number', () => {
 
-    const primes = []
-    for(let i=0; i<=50; i++) {
-      isNumberPrime(i) ? primes.push(i) : false
-    }
+      expect(isNumberPrime(20)).not.toBe(true)
+    })
 
-    it('finds prime numbers on correct arguments', () => {
+    it('can be used to filter prime numbers', () => {
+      const primes = []
+      for(let i=0; i<=50; i++) {
+        isNumberPrime(i) ? primes.push(i) : false
+      }
+
       expect(primes).toEqual(primeNumbers);
       expect(primes).not.toEqual([]);
-      expect(isNumberPrime(primeNumber)).toBe(true)
-      expect(isNumberPrime(notPrimeNumber)).not.toBe(true)
     })
   })
 

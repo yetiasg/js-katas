@@ -1,7 +1,7 @@
 const { expect, describe, it } = require('@jest/globals')
 const { sumOfMultiples } = require('./app.js')
 
-describe('#multiples-of-3-and-5', () => {
+describe('#sumOfMultiples', () => {
   describe('Valid arguments input', () => {
     it('find and sum all multiples for 3 and/or 5 for given number', () => {
       expect(sumOfMultiples([3, 5], 10)).toEqual(23);

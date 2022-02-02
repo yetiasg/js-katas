@@ -1,7 +1,7 @@
 const { expect, describe, it } = require('@jest/globals')
 const { findElement } = require('./app.js')
 
-describe('#kth-largest-element-in-array', () => {
+describe('#findElement', () => {
   const arr =  [3, 1, 2, 1, 4]
   describe('Valid arguments input', () => {
 

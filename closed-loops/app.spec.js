@@ -1,7 +1,7 @@
 const { expect, describe, it } = require('@jest/globals')
 const { countClosedLoops } = require('./app.js')
 
-describe('#closed-loops', () => {
+describe('#countClosedLoops', () => {
   describe('Valid arguments input', () => {
     const options =  [
       {num: 6886, loops: 6},

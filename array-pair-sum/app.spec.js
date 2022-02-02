@@ -1,7 +1,7 @@
 const { expect, describe, it } = require('@jest/globals')
 const { findPairs } = require('./app.js')
 
-describe('#array-pair-sum', () => {
+describe('#findPairs', () => {
   describe('Valid arguments input', () => {
     const options = [
       {val: 10, arr: [3, 4, 5, 5, 6, 7], result: [ [ 5, 5 ], [ 4, 6 ], [ 3, 7 ] ]},
@@ -26,7 +26,7 @@ describe('#array-pair-sum', () => {
       expect(() => findPairs(14)).toThrow('You need to pass an array with numbers')
     })
 
-    it('throws - You need to pass number to find - exception when input is invalid', () => {
+    it('throws - You need to pass number to find - exception when inputs is invalid', () => {
       expect(() => findPairs('', [3, 4, 5, 5, 6, 7])).toThrow('You need to pass number to find')
       expect(() => findPairs('5', [3, 4, 5, 5, 6, 7])).toThrow('You need to pass number to find')
       expect(() => findPairs([], [3, 4, 5, 5, 6, 7])).toThrow('You need to pass number to find')

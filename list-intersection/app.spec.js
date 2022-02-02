@@ -1,7 +1,7 @@
 const { expect, describe, it } = require('@jest/globals')
 const { listIntersection } = require('./app.js')
 
-describe('#list-intersection', () => {
+describe('#listIntersection', () => {
   describe('Valid arguments input', () => {
     const result = [ 'dog', 'cat' ].sort()
 
