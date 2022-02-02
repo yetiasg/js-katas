@@ -21,5 +21,10 @@ describe('Checking if given number is a prime number', () => {
     expect(primes).not.toEqual([]);
     expect(isNumberPrime(primeNumber)).toBe(true)
     expect(isNumberPrime(notPrimeNumber)).not.toBe(true)
+    expect(isNumberPrime('notPrimeNumber')).toEqual('You need to pass a number')
+    expect(isNumberPrime(true)).toEqual('You need to pass a number')
+    expect(isNumberPrime()).toEqual('You need to pass a number')
+    expect(isNumberPrime([])).toEqual('You need to pass a number')
+    expect(isNumberPrime('23')).toEqual('You need to pass a number')
   })
 })
