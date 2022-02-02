@@ -5,9 +5,11 @@ describe('Test finding anagrams', () => {
   it('finds all possible anagrams from given string', () => {
     const string = 'ABC'
     const result = [ 'ABC', 'ACB', 'BAC', 'BCA', 'CAB', 'CBA' ]
-    const failResult = [ 'ABC', 'ACB', 'BAC', 'BCA', 'CAB', 'CBA', 'ABC' ]
     expect(findAnagrams(string)).toEqual(result)
-    expect(findAnagrams(string)).not.toEqual(failResult)
-    expect(findAnagrams(string)).not.toEqual([])
+    expect(findAnagrams(string)).not.toEqual('You need to pass a string')
+    expect(findAnagrams()).toEqual('You need to pass a string')
+    expect(findAnagrams([])).toEqual('You need to pass a string')
+    expect(findAnagrams(['sdd'])).toEqual('You need to pass a string')
+    expect(findAnagrams(true)).toEqual('You need to pass a string')
   })
 })

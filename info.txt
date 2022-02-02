@@ -1,8 +1,9 @@
-prime-number
-sorted-array-search
-string-permutations
-sum-of-array-plus-one
-multiples-of-3-and-5
+prime-number ~
+sorted-array-search ~
+string-permutations ~
+sum-of-array-plus-one ~
+multiples-of-3-and-5 ~
+
 longest-words
 list-intersection
 kth-largest-element-in-array
